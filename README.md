@@ -8,6 +8,8 @@ An Analysis of HTTP/2: The present and the future.
 
 [Project presenation](https://drive.google.com/open?id=1gPxkHytO-3c1vs1pzGRvDawIHncJc_2B)
 
+Final report: [Final report](HTTP2_Analysis_2.pdf)
+
 The Alexa top 1m websites can be found [here](http://s3.amazonaws.com/alexa-static/top-1m.csv.zip). However there are only ~700k websites.
 
 For the adoption examination, we wrote a program in Python to check the HTTP/2 support status of Alexa top 511,850 websites. All websites are sorted by rank in a csv file. Each line contains two parts separated by a comma: the rank of the site and its domain without http schema prefix (http:// or https://) e.g. facebook.com, google.com. The program uses nghttp2 command-line interface (CLI) to send and receive HTTP/2 requests. nghttp2 is one of the most efficient and mature HTTP/2 implementations \cite{nghttp2}. Responses from websites are in form of strings. We obtain useful fields of this data using regular expressions, and then store results in a sqlite database for further analysis. 
